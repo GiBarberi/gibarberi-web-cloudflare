@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gi. Barberi · Diseño, marketing y SEO</title>
+<meta name="description" content="Gi. Barberi: estudio de diseño, marketing y SEO en Buenos Aires. Branding, diseño web, Google Ads, Meta Ads y visibilidad en IA.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://gibarberi.pages.dev/">
+<meta property="og:type" content="website"><meta property="og:title" content="Gi. Barberi · Diseño, marketing y SEO">
+<meta property="og:description" content="Marcas que la gente elige. Y la IA también. Branding, diseño web, Ads y SEO en Buenos Aires.">
+<meta property="og:image" content="https://gibarberi.pages.dev/og.png"><meta property="og:url" content="https://gibarberi.pages.dev/">
+<meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#5B30FF">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Gi. Barberi","description":"Estudio de diseño, marketing y SEO","founder":{"@type":"Person","name":"Graciela Barberi"},"url":"https://gibarberi.pages.dev/","image":"https://gibarberi.pages.dev/og.png","knowsAbout":["Branding","Diseño web","Google Ads","Meta Ads","SEO","Visibilidad en IA","Automatización con IA"],"areaServed":["Argentina","Latinoamérica"],"address":{"@type":"PostalAddress","addressLocality":"Buenos Aires","addressCountry":"AR"},"email":"grabarberidg@gmail.com","telephone":"+5491121657824","sameAs":["https://www.instagram.com/gi.barberi.agency/","https://linkedin.com/in/gbarberi","https://behance.net/gbarberi"]}</script>
+<style>
+/* VOICE  segura, cercana, rioplatense; frases cortas
+   IDEA   la web se comporta como una respuesta de IA que te recomienda: el punto del logo es el cursor, el loader y la firma
+   PICTURE una ventana de chat que escribe en vivo y recomienda a Gi. Barberi
+   COLOUR papel + violeta Gi dominante, lavanda de apoyo, aurora (azul-violeta-orquídea) solo en bandas de impacto
+   TYPE   Montserrat 700 apretada + Instrument Serif itálica para el acento; LAYOUT bandas a sangre, contenido 1240px */
+:root{color-scheme:light;--paper:#F7F6FB;--ink:#120C2E;--v:#5B30FF;--blue:#25A8FF;--orc:#C86AF6;--lav:#EEEAFE;--line:#DCD6F2;--grey:#5E5A78;
+--grad:linear-gradient(135deg,var(--blue),var(--v) 52%,var(--orc));
+--aurora:radial-gradient(60% 55% at 50% 60%,rgba(37,168,255,.95),transparent 70%),radial-gradient(40% 40% at 95% 5%,rgba(200,106,246,.9),transparent 70%),radial-gradient(45% 45% at 5% 95%,rgba(156,123,255,.8),transparent 70%),var(--v)}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 Montserrat,system-ui,sans-serif;overflow-x:clip;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.it{font-family:"Instrument Serif",Georgia,serif;font-style:italic;font-weight:400;letter-spacing:0}
+.wrap{max-width:1240px;margin:0 auto}
+.band{padding:clamp(64px,9vw,128px) max(5vw,18px)}
+.dot{display:inline-block;width:.2em;height:.2em;border-radius:50%;background:var(--grad);margin-left:.04em}
+.lbl{font-size:13px;font-weight:600;color:var(--v);margin:0 0 18px}
+h2{font-size:clamp(40px,6.4vw,92px);line-height:.98;letter-spacing:-.045em;margin:0;font-weight:700;text-wrap:balance}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 28px;border-radius:999px;background:var(--v);color:#fff;font-weight:600;text-decoration:none;border:0;font:600 16px Montserrat,sans-serif;cursor:pointer;transition:transform .25s}
+.btn:hover{transform:translateY(-2px)}.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+:focus-visible{outline:3px solid var(--orc);outline-offset:3px}
+
+/* loader */
+#ld{position:fixed;inset:0;z-index:99;background:var(--paper);display:flex;align-items:flex-end;justify-content:space-between;padding:5vw;transition:clip-path .9s cubic-bezier(.7,0,.2,1)}
+#ld b{font-size:clamp(90px,20vw,260px);letter-spacing:-.06em;line-height:.8}
+#ld i{width:clamp(40px,7vw,90px);aspect-ratio:1;border-radius:50%;background:var(--grad);margin-bottom:2vw}
+#ld.out{clip-path:circle(0% at 50% 50%)}
+/* cursor */
+.cur{position:fixed;left:0;top:0;width:18px;height:18px;border-radius:50%;background:var(--grad);pointer-events:none;z-index:98;transform:translate(-50%,-50%);transition:width .25s,height .25s,opacity .25s;mix-blend-mode:multiply;opacity:0}
+.cur.big{width:64px;height:64px;opacity:.55}
+@media(pointer:coarse){.cur{display:none}}
+
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:18px max(5vw,18px);transition:background .3s}
+nav.sc{background:rgba(247,246,251,.86);backdrop-filter:blur(14px)}
+.logo{font-weight:700;font-size:22px;letter-spacing:-.03em;text-decoration:none}
+.nr{display:flex;gap:10px}.nr .btn{min-height:44px;padding:0 20px;font-size:15px}
+#menu{position:fixed;inset:0;z-index:60;background:var(--lav);padding:110px max(5vw,18px) 40px;display:flex;flex-direction:column;justify-content:space-between;clip-path:circle(0% at calc(100% - 60px) 40px);transition:clip-path .7s cubic-bezier(.7,0,.2,1)}
+#menu.on{clip-path:circle(150% at calc(100% - 60px) 40px)}
+#menu a.m{display:block;font-size:clamp(48px,10vw,128px);font-weight:700;letter-spacing:-.055em;line-height:.95;text-decoration:none;transition:color .2s,transform .3s}
+#menu a.m:hover{color:var(--v);transform:translateX(16px)}
+#menu .mf{display:flex;flex-wrap:wrap;gap:12px 28px;font-weight:500}
+.x{position:absolute;top:18px;right:max(5vw,18px)}
+
+/* hero */
+#hero{min-height:100svh;padding-top:110px;padding-bottom:56px;display:grid;align-content:center}
+.hgrid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(28px,4vw,64px);align-items:center}
+h1{font-size:clamp(50px,6.6vw,108px);line-height:.92;letter-spacing:-.055em;margin:0 0 28px;font-weight:700;text-wrap:balance}
+h1 .it{font-size:1.1em;color:var(--v)}
+.lede{font-size:18px;max-width:440px;color:var(--grey);margin:0 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+/* chat */
+.chat{background:#fff;border-radius:28px;box-shadow:0 40px 80px -30px rgba(40,20,120,.35),0 0 0 1px var(--line);overflow:hidden}
+.ch{display:flex;align-items:center;gap:10px;padding:16px 20px;border-bottom:1px solid var(--line);font-size:14px;font-weight:600}
+.ch i{width:12px;height:12px;border-radius:50%;background:var(--grad)}.ch span{margin-left:auto;font-weight:500;color:var(--grey);font-size:13px}
+.log{height:340px;overflow-y:auto;padding:22px;display:flex;flex-direction:column;gap:14px;scroll-behavior:smooth}
+.q{align-self:flex-end;background:var(--lav);border-radius:20px 20px 6px 20px;padding:12px 16px;max-width:85%;font-weight:500}
+.a{display:grid;grid-template-columns:30px 1fr;gap:12px;max-width:95%}
+.a .av{width:30px;height:30px;border-radius:50%;background:var(--grad);color:#fff;font:700 12px Montserrat;display:grid;place-items:center}
+.a p{margin:0;line-height:1.6}.a b{color:var(--v)}
+.src{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.src a{font-size:13px;padding:5px 11px;border-radius:999px;background:var(--paper);text-decoration:none;box-shadow:inset 0 0 0 1px var(--line)}
+.caret{display:inline-block;width:8px;height:1em;background:var(--v);vertical-align:-2px;animation:bl .8s steps(1) infinite}@keyframes bl{50%{opacity:0}}
+.chips{display:flex;gap:8px;padding:0 20px 12px;overflow-x:auto}
+.chips button{flex:none;min-height:40px;border:0;border-radius:999px;padding:0 16px;background:var(--paper);box-shadow:inset 0 0 0 1px var(--line);font:500 14px Montserrat;color:var(--ink);cursor:pointer}
+.chips button:hover{box-shadow:inset 0 0 0 1.5px var(--v);color:var(--v)}
+form.in{display:flex;gap:10px;padding:12px 16px 16px}
+form.in input{flex:1;min-height:52px;border-radius:999px;border:0;box-shadow:inset 0 0 0 1.5px var(--line);padding:0 20px;font:16px Montserrat;background:var(--paper);color:var(--ink)}
+form.in input:focus{outline:none;box-shadow:inset 0 0 0 2px var(--v)}
+form.in button{width:52px;height:52px;border-radius:50%;border:0;background:var(--v);color:#fff;cursor:pointer;font-size:20px}
+.note{font-size:13px;color:var(--grey);padding:0 22px 16px;margin:0}
+
+/* marquee */
+.mq{background:var(--aurora);color:#fff;overflow:hidden;padding:28px 0;white-space:nowrap}
+.mq div{display:inline-flex;gap:48px;animation:mq 30s linear infinite;font-size:clamp(32px,4.4vw,60px);font-weight:700;letter-spacing:-.03em}
+.mq span::after{content:"";display:inline-block;width:.32em;height:.32em;border-radius:50%;background:#fff;margin-left:48px;vertical-align:middle}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* servicios */
+.svc{margin-top:48px;border-top:1.5px solid var(--line)}
+.row{border-bottom:1.5px solid var(--line)}
+.row button{all:unset;box-sizing:border-box;width:100%;display:flex;align-items:center;gap:20px;padding:26px 0;cursor:pointer;font-size:clamp(26px,4vw,52px);font-weight:700;letter-spacing:-.035em;line-height:1.05}
+.row button .it{color:var(--v);font-size:1.05em}
+.row button::after{content:"+";margin-left:auto;font-weight:400;font-size:.8em;transition:transform .3s}
+.row.on button::after{transform:rotate(45deg)}
+.row .d{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s}
+.row.on .d{grid-template-rows:1fr}
+.d>div{overflow:hidden}
+.d p{margin:0 0 26px;max-width:620px;font-size:17px;color:var(--grey)}
+.d .tags{display:flex;flex-wrap:wrap;gap:8px;margin:-10px 0 28px}.d .tags span{font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px;background:var(--lav);color:var(--v)}
+
+/* test */
+#test{background:var(--lav)}
+.tgrid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(28px,5vw,80px);margin-top:48px;align-items:start}
+.qs{display:grid;gap:12px}
+.qi{display:flex;align-items:center;gap:16px;background:#fff;border-radius:18px;padding:16px 18px;font-weight:500}
+.qi span{flex:1}
+.tg{display:flex;background:var(--paper);border-radius:999px;padding:4px;flex:none}
+.tg button{min-height:40px;min-width:56px;border:0;border-radius:999px;background:transparent;font:600 14px Montserrat;color:var(--grey);cursor:pointer}
+.tg button.sel{background:var(--v);color:#fff}
+.score{position:sticky;top:100px;background:#fff;border-radius:28px;padding:36px;text-align:center}
+.ring{width:min(260px,70vw);aspect-ratio:1;margin:0 auto;position:relative}
+.ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ring b{position:absolute;inset:0;display:grid;place-items:center;font-size:clamp(56px,8vw,84px);letter-spacing:-.05em}
+.score h3{font-size:26px;letter-spacing:-.02em;margin:18px 0 8px}.score p{color:var(--grey);margin:0 0 22px}
+
+/* trabajos */
+.wgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:48px}
+.w{border-radius:24px;overflow:hidden;background:#fff;box-shadow:0 0 0 1px var(--line);text-decoration:none;transition:transform .35s}
+.w:hover{transform:translateY(-6px)}
+.w .im{aspect-ratio:4/3;display:grid;place-items:end start;padding:20px;color:#fff;font-weight:700;font-size:28px;letter-spacing:-.03em}
+.w .tx{padding:16px 20px 20px;display:flex;justify-content:space-between;gap:10px;font-size:14px;color:var(--grey)}
+.small{font-size:13px;color:var(--grey);margin-top:18px}
+
+/* proceso */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:56px;position:relative}
+.steps::before{content:"";position:absolute;left:0;right:0;top:11px;height:2px;background:var(--line)}
+.steps .fill{position:absolute;left:0;top:11px;height:2px;background:var(--v);width:var(--p,0%);transition:width .2s}
+.st{position:relative;padding-top:48px}
+.st::before{content:"";position:absolute;top:0;left:0;width:24px;height:24px;border-radius:50%;background:#fff;box-shadow:inset 0 0 0 2px var(--v)}
+.st.on::before{background:var(--grad);box-shadow:none}
+.st h3{font-size:24px;letter-spacing:-.02em;margin:0 0 8px}.st p{margin:0;color:var(--grey)}
+
+/* sobre */
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,80px);align-items:center}
+.about ul{list-style:none;padding:0;margin:28px 0 0}.about li{padding:16px 0;border-top:1.5px solid var(--line);font-weight:600;display:flex;gap:14px;align-items:center}
+.about li::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--v);flex:none}
+.big{font-size:clamp(80px,16vw,220px);font-weight:700;letter-spacing:-.065em;line-height:.85}
+
+/* contacto */
+#contacto{background:var(--aurora);color:#fff}
+#contacto h2{font-size:clamp(80px,17vw,240px);letter-spacing:-.065em;line-height:.85}
+#contacto .dot{background:#fff}
+.cgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:56px}
+.cgrid a{display:block;padding:22px 24px;border-radius:20px;background:rgba(255,255,255,.12);box-shadow:inset 0 0 0 1px rgba(255,255,255,.3);text-decoration:none;transition:background .2s}
+.cgrid a:hover{background:rgba(255,255,255,.22)}.cgrid small{display:block;opacity:.75;font-size:13px}.cgrid b{font-size:18px;overflow-wrap:anywhere}
+footer{padding:28px max(5vw,18px);display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;font-size:13px;color:var(--grey)}
+
+.rv{opacity:0;transform:translateY(40px);transition:opacity .9s,transform .9s cubic-bezier(.2,.7,.2,1)}.rv.in{opacity:1;transform:none}
+@media(max-width:900px){.hgrid,.tgrid,.about{grid-template-columns:minmax(0,1fr)}.wgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.steps::before,.steps .fill{display:none}.score{position:static}}
+@media(max-width:600px){.wgrid,.cgrid{grid-template-columns:minmax(0,1fr)}.nr .ghost{display:none}.log{height:300px}.qi{flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}#ld{display:none}}
+</style>
+</head>
+<body>
+<div id="ld" aria-hidden="true"><b id="pc">0</b><i></i></div>
+<div class="cur" id="cur"></div>
+
+<nav id="nav"><a class="logo" href="#hero">Gi<span class="dot"></span> Barberi</a>
+<div class="nr"><a class="btn ghost" href="#contacto">Hablemos</a><button class="btn" id="mb" aria-expanded="false">Menú</button></div></nav>
+<div id="menu" role="dialog" aria-label="Menú">
+ <button class="btn ghost x" id="mx">Cerrar</button>
+ <div><a class="m" href="#servicios">Servicios</a><a class="m" href="#test">Test de visibilidad</a><a class="m" href="#trabajos">Trabajos</a><a class="m" href="#sobre">Sobre mí</a><a class="m" href="#contacto">Contacto</a></div>
+ <div class="mf"><span>grabarberidg@gmail.com</span><span>+54 9 11 2165-7824</span><a href="https://www.instagram.com/gi.barberi.agency/">Instagram</a><a href="https://linkedin.com/in/gbarberi">LinkedIn</a><a href="https://behance.net/gbarberi">Behance</a></div>
+</div>
+
+<main>
+<section id="hero" class="band"><div class="wrap">
+ <div class="hgrid">
+  <div><p class="lbl">Diseño, marketing y SEO · Buenos Aires</p>
+   <h1>Marcas que la gente elige. <span class="it">Y la IA también.</span></h1>
+   <p class="lede">Diseño tu marca, tu web y tus campañas para que te encuentren en Google, en las redes y en las respuestas de ChatGPT. Hacé la prueba: preguntale.</p>
+   <div class="cta"><a class="btn" href="#test">Medí tu visibilidad</a><a class="btn ghost" href="#trabajos">Ver trabajos</a></div></div>
+  <div class="chat" aria-label="Demo de respuesta de IA">
+   <div class="ch"><i></i>Preguntale a la IA<span>Demo</span></div>
+   <div class="log" id="log" aria-live="polite"></div>
+   <div class="chips" id="chips"></div>
+   <form class="in" id="fq"><input id="qi" placeholder="Escribí tu pregunta…" aria-label="Tu pregunta" autocomplete="off"><button aria-label="Enviar">↑</button></form>
+   <p class="note">Respuestas escritas por Gi. Barberi para esta demo, no por un modelo de IA.</p>
+  </div>
+ </div>
+</div></section>
+
+<div class="mq" aria-hidden="true"><div id="mqd"></div></div>
+
+<section id="servicios" class="band"><div class="wrap">
+ <p class="lbl">Servicios</p><h2 class="rv">Todo lo que tu marca necesita, <span class="it">en un solo lugar.</span></h2>
+ <div class="svc" id="svc"></div>
+</div></section>
+
+<section id="test" class="band"><div class="wrap">
+ <p class="lbl">Test de visibilidad · 1 minuto</p><h2 class="rv">¿Cuán visible es tu marca <span class="it">hoy?</span></h2>
+ <div class="tgrid"><div class="qs" id="qs"></div>
+  <div class="score"><div class="ring"><svg viewBox="0 0 120 120"><defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#25A8FF"/><stop offset=".55" stop-color="#5B30FF"/><stop offset="1" stop-color="#C86AF6"/></linearGradient></defs><circle cx="60" cy="60" r="52" fill="none" stroke="#EEEAFE" stroke-width="12"/><circle id="arc" cx="60" cy="60" r="52" fill="none" stroke="url(#rg)" stroke-width="12" stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="326.7" style="transition:stroke-dashoffset .8s cubic-bezier(.2,.7,.2,1)"/></svg><b id="sc">0</b></div>
+   <h3 id="sh">Respondé las preguntas</h3><p id="sp">Tu puntaje se calcula en vivo.</p>
+   <a class="btn" id="sw" href="https://wa.me/5491121657824">Quiero la auditoría completa</a></div></div>
+</div></section>
+
+<section id="trabajos" class="band"><div class="wrap">
+ <p class="lbl">Trabajos</p><h2 class="rv">Marcas que ya <span class="it">dieron el paso.</span></h2>
+ <div class="wgrid" id="wg"></div>
+ <p class="small">Las imágenes de cada proyecto se suman en la versión final.</p>
+</div></section>
+
+<section id="proceso" class="band" style="background:#fff"><div class="wrap">
+ <p class="lbl">Cómo trabajo</p><h2 class="rv">Cuatro pasos, <span class="it">cero humo.</span></h2>
+ <div class="steps" id="steps"><div class="fill" id="fill"></div></div>
+</div></section>
+
+<section id="sobre" class="band"><div class="wrap about">
+ <div class="big rv">Gi<span class="dot"></span></div>
+ <div><p class="lbl">Sobre mí</p><h2 style="font-size:clamp(40px,5vw,68px)">Hola, soy <span class="it">Graciela.</span></h2>
+  <p style="font-size:18px;color:var(--grey);margin:22px 0 0">Diseño marcas y sitios desde 2015. Hoy sumo marketing, Google Ads, SEO e IA para que tu marca no solo se vea bien: que venda. Trabajo con marcas de Argentina y Latinoamérica.</p>
+  <ul><li>Diseñadora gráfica · Universidad de Palermo</li><li>Máster en Diseño Web y Programación · Barcelona</li><li>Carrera de AI Marketing y Automatización</li></ul></div>
+</div></section>
+
+<section id="contacto" class="band"><div class="wrap">
+ <p class="lbl" style="color:#fff;opacity:.85">¿Tenés un proyecto en mente?</p>
+ <h2>Hable&shy;mos<span class="dot"></span></h2>
+ <p style="font-size:20px;max-width:520px;margin:28px 0 0;opacity:.92">Contame tu idea y te respondo en el día.</p>
+ <div class="cgrid">
+  <a href="https://wa.me/5491121657824"><small>WhatsApp</small><b>+54 9 11 2165-7824</b></a>
+  <a href="mailto:grabarberidg@gmail.com"><small>Email</small><b>grabarberidg@gmail.com</b></a>
+  <a href="https://www.instagram.com/gi.barberi.agency/"><small>Instagram</small><b>@gi.barberi.agency</b></a>
+ </div>
+</div></section>
+</main>
+<footer><span>© 2026 Gi. Barberi · Buenos Aires</span><span>Sitio estático en Cloudflare Pages · optimizado para Google y para IA</span><span><a href="https://linkedin.com/in/gbarberi">LinkedIn</a> · <a href="https://behance.net/gbarberi">Behance</a></span></footer>
+
+<script>
+{
+const $=s=>document.querySelector(s);
+const RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+/* loader */
+const ld=$('#ld'),pc=$('#pc');
+if(RM){ld.remove()}else{const t0=performance.now();const tick=n=>{const p=Math.min(1,(n-t0)/1300);pc.textContent=Math.round((1-Math.pow(1-p,3))*100);if(p<1)requestAnimationFrame(tick);else{setTimeout(()=>{ld.classList.add('out');setTimeout(()=>{ld.remove();startDemo()},900)},200)}};requestAnimationFrame(tick)}
+
+/* cursor */
+const cur=$('#cur');
+addEventListener('pointermove',e=>{cur.style.opacity=1;cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px'});
+document.addEventListener('pointerover',e=>cur.classList.toggle('big',!!e.target.closest('a,button,input')));
+
+/* nav + menú */
+const nav=$('#nav'),menu=$('#menu'),mb=$('#mb');
+addEventListener('scroll',()=>nav.classList.toggle('sc',scrollY>30),{passive:true});
+const setMenu=o=>{menu.classList.toggle('on',o);mb.setAttribute('aria-expanded',o)};
+mb.onclick=()=>setMenu(true);$('#mx').onclick=()=>setMenu(false);
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
+addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false)});
+
+/* datos */
+const SV=[["Branding","e identidad","Logo, paleta, tipografías y manual de marca. Una identidad que se reconoce al toque y funciona en todos lados.",["Naming","Manual de marca","Papelería"]],
+["Diseño","y desarrollo web","Sitios rápidos y claros, pensados para convertir visitas en consultas, con SEO técnico desde el primer día.",["WordPress","Tienda online","Landing pages"]],
+["Google Ads","y Meta Ads","Campañas que se miden peso por peso: estructura, anuncios, públicos y optimización mensual.",["Búsqueda","Performance Max","Instagram y Facebook"]],
+["SEO","y visibilidad en IA","Que te encuentren en Google y que ChatGPT, Gemini y Perplexity te recomienden. Incluye auditoría y plan de 90 días.",["Auditoría IA + SEO","SEO local","Contenido"]],
+["Automatización","con IA","Agentes y flujos que responden consultas, ordenan clientes y te ahorran horas cada semana.",["Chatbots","n8n","CRM"]],
+["Consultoría","y capacitación","Estrategia digital, acompañamiento y capacitación para que tu equipo trabaje mejor.",["Estrategia","Talleres","Mentoría"]]];
+const WK=[["El Edicto","Web · SEO · Ads","#5B30FF"],["Desarrollos Arinco","Diseño web","#25A8FF"],["Florería Rosamel","Diseño web","#C86AF6"],["Farmacias Hospital Italiano","Diseño web","#7B5CFF"],["Adu Gansslen","Diseño web","#3D7BFF"],["What Sale Miami","Diseño web","#9C5CF0"]];
+const STP=[["Diagnóstico","Entiendo tu negocio, tus números y a tu competencia."],["Estrategia","Definimos qué hacer, qué no y cómo medirlo."],["Diseño y ejecución","Creo, lanzo y mido, con revisiones pautadas."],["Optimización","Ajusto con datos hasta que funcione."]];
+const QS=["¿Tenés perfil de Google Business completo y con fotos?","¿Tenés más de 20 reseñas en Google?","¿Tu web carga en menos de 3 segundos en el celular?","¿Aparecés en la primera página cuando buscan tu rubro y tu ciudad?","¿ChatGPT te menciona si le preguntás por tu rubro?","¿Publicás contenido útil al menos una vez por semana?"];
+
+$('#mqd').innerHTML=[...SV,...SV].map(s=>`<span>${s[0]} <span class="it" style="font-weight:400">${s[1]}</span></span>`).join('');
+$('#svc').innerHTML=SV.map((s,i)=>`<div class="row${i?'':' on'}"><button aria-expanded="${!i}"><span>${s[0]} <span class="it">${s[1]}</span></span></button><div class="d"><div><p>${s[2]}</p><div class="tags">${s[3].map(t=>`<span>${t}</span>`).join('')}</div></div></div></div>`).join('');
+document.querySelectorAll('.row button').forEach(b=>b.onclick=()=>{const r=b.parentElement,o=!r.classList.contains('on');r.classList.toggle('on',o);b.setAttribute('aria-expanded',o)});
+$('#wg').innerHTML=WK.map(w=>`<a class="w" href="#contacto"><div class="im" style="background:radial-gradient(70% 70% at 80% 10%,rgba(255,255,255,.35),transparent 60%),${w[2]}">${w[0]}</div><div class="tx"><span>${w[1]}</span><span>→</span></div></a>`).join('');
+$('#steps').insertAdjacentHTML('beforeend',STP.map(s=>`<div class="st"><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join(''));
+
+/* test */
+const ans=Array(QS.length).fill(null);
+$('#qs').innerHTML=QS.map((q,i)=>`<div class="qi"><span>${q}</span><div class="tg" data-i="${i}"><button data-v="1">Sí</button><button data-v="0">No</button></div></div>`).join('');
+const arc=$('#arc'),sc=$('#sc'),sh=$('#sh'),sp=$('#sp'),sw=$('#sw');
+function score(){const done=ans.filter(a=>a!==null).length,yes=ans.filter(a=>a===1).length,v=Math.round(yes/QS.length*100);
+ arc.style.strokeDashoffset=326.7*(1-v/100);sc.textContent=v;
+ if(!done){return}
+ const [h,p]=v>=80?["¡Muy bien!","Tenés buena base. Una auditoría te muestra cómo pasar a ser la primera opción."]:v>=50?["Vas por buen camino","Hay oportunidades claras para que te encuentren más y te elijan antes."]:["Hay mucho por ganar","Hoy tus clientes probablemente encuentran a tu competencia primero. Se puede revertir."];
+ sh.textContent=h;sp.textContent=p+(done<QS.length?` (${done} de ${QS.length} respondidas)`:'');
+ sw.href='https://wa.me/5491121657824?text='+encodeURIComponent(`Hola Gi, hice el test de visibilidad y me dio ${v}/100. Quiero la auditoría completa.`)}
+document.querySelectorAll('.tg').forEach(g=>g.onclick=e=>{const b=e.target.closest('button');if(!b)return;g.querySelectorAll('button').forEach(x=>x.classList.toggle('sel',x===b));ans[+g.dataset.i]=+b.dataset.v;score()});
+
+/* chat */
+const SRC=[["Instagram","https://www.instagram.com/gi.barberi.agency/"],["LinkedIn","https://linkedin.com/in/gbarberi"],["Behance","https://behance.net/gbarberi"]];
+const R={
+ rec:{k:/quien|quién|recomend|ayud|estudio|agencia|diseñador|marca/,t:"Te recomiendo **Gi. Barberi**, el estudio de Graciela Barberi en Buenos Aires. Combina diseño gráfico y web con Google Ads, SEO y visibilidad en IA: pensás la marca y la hacés vender con una sola persona. Trabaja con marcas de Argentina y Latinoamérica.",s:1},
+ svc:{k:/servicio|hace|ofrece|qué hac/,t:"Ofrece **branding**, **diseño web**, **Google y Meta Ads**, **SEO y visibilidad en IA**, **automatización con IA** y **consultoría**. Podés ver el detalle en la sección Servicios.",go:"#servicios"},
+ pre:{k:/precio|cuesta|cuánto|cuanto|presupuesto|tarifa/,t:"Depende del alcance. Después de una primera charla sin costo, te arma una **propuesta con tres planes** para que elijas cómo avanzar.",go:"#contacto"},
+ ia:{k:/\bia\b|chatgpt|gemini|seo|google|auditor|visib/,t:"Hace una **Auditoría de visibilidad IA + SEO**: mide cómo te muestran Google, ChatGPT, Gemini y Perplexity, te compara con tu competencia y te da un plan de 90 días. Probá el test gratis acá abajo.",go:"#test"},
+ web:{k:/web|sitio|página|pagina|tienda/,t:"Diseña y desarrolla **sitios rápidos y claros**, con SEO técnico desde el primer día y pensados para que las visitas se conviertan en consultas.",go:"#trabajos"},
+ pro:{k:/trabaja|proceso|cómo|como|paso/,t:"Trabaja en **cuatro pasos**: diagnóstico, estrategia, diseño y ejecución, y optimización con datos.",go:"#proceso"},
+ con:{k:/contact|whats|mail|hablar|escrib/,t:"Escribile por **WhatsApp al +54 9 11 2165-7824** o a **grabarberidg@gmail.com**. Responde en el día.",go:"#contacto"}};
+const CH=[["¿Qué servicios ofrece?","svc"],["¿Hace auditorías de IA?","ia"],["¿Cuánto cuesta?","pre"],["¿Cómo trabaja?","pro"]];
+const log=$('#log');let busy=false;
+const esc=s=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const md=s=>esc(s).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
+function say(q,key){if(busy)return;busy=true;
+ log.insertAdjacentHTML('beforeend',`<div class="q">${esc(q)}</div>`);
+ const r=R[key]||Object.values(R).find(x=>x.k.test(q.toLowerCase()))||{t:"Buena pregunta. Lo mejor es que se lo cuentes directo a Graciela: **WhatsApp +54 9 11 2165-7824**. Te responde en el día.",go:"#contacto"};
+ const a=document.createElement('div');a.className='a';a.innerHTML='<div class="av">Gi.</div><div><p></p></div>';log.appendChild(a);
+ const p=a.querySelector('p');let i=0;const txt=r.t;
+ const step=()=>{i=Math.min(txt.length,i+(RM?txt.length:3));p.innerHTML=md(txt.slice(0,i))+(i<txt.length?'<span class="caret"></span>':'');log.scrollTop=log.scrollHeight;
+  if(i<txt.length)setTimeout(step,18);else{busy=false;const extra=[];if(r.s)extra.push(...SRC.map(s=>`<a href="${s[1]}">${s[0]}</a>`));if(r.go)extra.push(`<a href="${r.go}">Ver más →</a>`);if(extra.length)a.lastElementChild.insertAdjacentHTML('beforeend',`<div class="src">${extra.join('')}</div>`);log.scrollTop=log.scrollHeight}};
+ setTimeout(step,RM?0:450)}
+$('#chips').innerHTML=CH.map(c=>`<button data-k="${c[1]}">${c[0]}</button>`).join('');
+$('#chips').onclick=e=>{const b=e.target.closest('button');if(b)say(b.textContent,b.dataset.k)};
+$('#fq').onsubmit=e=>{e.preventDefault();const v=$('#qi').value.trim();if(v){say(v);$('#qi').value=''}};
+let started=false;function startDemo(){if(started)return;started=true;say("¿Quién me ayuda con el diseño y el marketing de mi marca en Buenos Aires?","rec")}
+if(RM)startDemo();setTimeout(startDemo,2600);
+
+/* reveal + proceso */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.2});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const stp=$('#steps'),fill=$('#fill'),sts=[...document.querySelectorAll('.st')];
+addEventListener('scroll',()=>{const r=stp.getBoundingClientRect(),p=Math.min(1,Math.max(0,(innerHeight*.75-r.top)/(r.height+innerHeight*.2)));fill.style.setProperty('--p',p*100+'%');sts.forEach((s,i)=>s.classList.toggle('on',p>=i/(sts.length-1)-.02))},{passive:true});
+}
+</script>
+</body>
+</html>
