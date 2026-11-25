@@ -58,11 +58,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:cent
 nav.sc{background:rgba(247,246,251,.86);backdrop-filter:blur(14px)}
 .logo{font-weight:700;font-size:22px;letter-spacing:-.03em;text-decoration:none}
 .nr{display:flex;gap:10px}.nr .btn{min-height:44px;padding:0 20px;font-size:15px}
-#menu{position:fixed;inset:0;z-index:60;background:var(--lav);padding:110px max(5vw,18px) 40px;display:flex;flex-direction:column;justify-content:space-between;clip-path:circle(0% at calc(100% - 60px) 40px);transition:clip-path .7s cubic-bezier(.7,0,.2,1)}
+#menu{position:fixed;inset:0;height:100dvh;overflow-y:auto;z-index:60;background:var(--lav);padding:100px max(5vw,18px) 32px;display:flex;flex-direction:column;gap:40px;clip-path:circle(0% at calc(100% - 60px) 40px);transition:clip-path .7s cubic-bezier(.7,0,.2,1)}
 #menu.on{clip-path:circle(150% at calc(100% - 60px) 40px)}
-#menu a.m{display:block;font-size:clamp(48px,10vw,128px);font-weight:700;letter-spacing:-.055em;line-height:.95;text-decoration:none;transition:color .2s,transform .3s}
+#menu .ml{display:flex;flex-direction:column;gap:clamp(6px,1.2vh,14px);margin:auto 0}
+#menu a.m{display:block;width:fit-content;font-size:clamp(34px,min(5.4vw,7.2vh),76px);font-weight:700;letter-spacing:-.04em;line-height:1.12;padding:4px 0;text-decoration:none;transition:color .2s,transform .3s}
 #menu a.m:hover{color:var(--v);transform:translateX(16px)}
-#menu .mf{display:flex;flex-wrap:wrap;gap:12px 28px;font-weight:500}
+#menu .mf{display:flex;flex-wrap:wrap;gap:12px 28px;font-weight:500;padding-top:22px;border-top:1.5px solid rgba(91,48,255,.2)}
 .x{position:absolute;top:18px;right:max(5vw,18px)}
 
 /* hero */
@@ -192,7 +193,7 @@ footer{padding:28px max(5vw,18px);display:flex;flex-wrap:wrap;gap:12px 28px;just
 <div class="nr"><a class="btn ghost" href="#contacto">Hablemos</a><button class="btn" id="mb" aria-expanded="false">Menú</button></div></nav>
 <div id="menu" role="dialog" aria-label="Menú">
  <button class="btn ghost x" id="mx">Cerrar</button>
- <div><a class="m" href="#servicios">Servicios</a><a class="m" href="#test">Test de visibilidad</a><a class="m" href="#trabajos">Trabajos</a><a class="m" href="#sobre">Sobre mí</a><a class="m" href="#contacto">Contacto</a></div>
+ <div class="ml"><a class="m" href="#servicios">Servicios</a><a class="m" href="#test">Test de visibilidad</a><a class="m" href="#trabajos">Trabajos</a><a class="m" href="#sobre">Sobre mí</a><a class="m" href="#contacto">Contacto</a></div>
  <div class="mf"><span>grabarberidg@gmail.com</span><a href="https://www.instagram.com/gi.barberi.agency/">Instagram</a><a href="https://linkedin.com/in/gbarberi">LinkedIn</a><a href="https://behance.net/gbarberi">Behance</a></div>
 </div>
 
