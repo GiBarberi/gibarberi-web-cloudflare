@@ -1,33 +1,35 @@
 # Gi. Barberi
 
-> Estudio de diseño, marketing y SEO de Graciela Barberi, en Buenos Aires, Argentina. Trabaja con marcas de Argentina y Latinoamérica.
+> Estudio de diseño, marketing y SEO de Graciela (Grace) Barberi, en Buenos Aires, Argentina. Ayuda a pymes, profesionales y emprendedores de Argentina y Latinoamérica a verse bien y vender más: branding, diseño web, Google Ads y Meta Ads, SEO y visibilidad en inteligencia artificial, automatización con IA y consultoría.
 
-Graciela Barberi es diseñadora gráfica (Universidad de Palermo) con máster en Diseño Web y Programación (Barcelona). Diseña marcas y sitios desde 2015 y suma marketing digital, Google Ads, SEO y visibilidad en IA.
+Graciela Barberi es diseñadora gráfica (Universidad de Palermo) con máster en Diseño Web y Programación Multidispositivo (Escuela Superior de Diseño de Barcelona). Diseña marcas y sitios desde 2015 y suma marketing digital, Google Ads, SEO, GEO y automatización con IA. Una sola persona piensa la estrategia, la diseña, la ejecuta y la mide.
 
 ## Servicios
-- Branding e identidad: logo, paleta, tipografías y manual de marca.
-- Diseño y desarrollo web: sitios rápidos, tiendas online y landing pages con SEO técnico.
-- Google Ads y Meta Ads: campañas medidas y optimizadas cada mes.
-- SEO y visibilidad en IA: auditoría de cómo aparece una marca en Google, ChatGPT, Gemini y Perplexity, con plan de acción a 90 días.
-- Automatización con IA: chatbots, agentes y flujos con n8n y CRM.
-- Consultoría y capacitación en estrategia digital.
 
-## Páginas
-- Auditoría SEO y visibilidad en IA: https://gibarberi.pages.dev/auditoria-seo-ia/
-- Diseño web: https://gibarberi.pages.dev/diseno-web/
-- Branding: https://gibarberi.pages.dev/branding/
-- Google Ads y Meta Ads: https://gibarberi.pages.dev/google-ads-meta-ads/
-- Automatización con IA: https://gibarberi.pages.dev/automatizacion-ia/
-- Consultoría: https://gibarberi.pages.dev/consultoria/
+- [Auditoría SEO y visibilidad en IA](https://gibarberi.pages.dev/auditoria-seo-ia/): cómo aparece una marca en Google, ChatGPT, Gemini y Perplexity, comparación con la competencia y plan de acción a 90 días.
+- [Diseño web](https://gibarberi.pages.dev/diseno-web/): sitios rápidos, tiendas online y landing pages con SEO técnico y medición desde el primer día.
+- [Branding e identidad visual](https://gibarberi.pages.dev/branding/): estrategia de marca, logo, paleta, tipografías y manual de identidad.
+- [Google Ads y Meta Ads](https://gibarberi.pages.dev/google-ads-meta-ads/): campañas medidas en conversiones, con optimización y reporte mensual.
+- [Automatización con IA](https://gibarberi.pages.dev/automatizacion-ia/): chatbots, agentes y flujos con n8n y CRM.
+- [Consultoría y capacitación](https://gibarberi.pages.dev/consultoria/): estrategia digital, acompañamiento y talleres para equipos.
 
-## Trabajos destacados
-- Sitios web: ActionTech, Florería Rosamel (tienda online), LAVO Lavandería, Provisuales, Estudio Lang, Red de Receptorías, Tu Edicto Perú, Tu Edicto México, Publish Legal Notice (Estados Unidos).
-- Branding: DevPanda, Industrias Paracol, RET Estructuras Metálicas, Somos Cafetería.
+## Trabajos
+
+- [Portfolio en el sitio](https://gibarberi.pages.dev/#trabajos): 15 proyectos con su caso completo.
+- Sitios web: ActionTech, Florería Rosamel (tienda online), LAVO Lavandería, Provisuales, Estudio Lang, Red de Receptorías, Tu Edicto Perú, Tu Edicto México y Publish Legal Notice (Estados Unidos).
+- Branding: DevPanda, Industrias Paracol, RET Estructuras Metálicas y Somos Cafetería.
 - Marketing: El Edicto, estrategia 2027.
 - SEO y visibilidad en IA: El Edicto, auditoría SEO, GEO, AEO y SEM.
-- Portfolio completo: https://behance.net/gbarberi
+- [Portfolio completo en Behance](https://behance.net/gbarberi)
 
 ## Contacto
-- Instagram: https://www.instagram.com/gi.barberi.agency/
-- LinkedIn: https://linkedin.com/in/gbarberi
-- Behance: https://behance.net/gbarberi
+
+- [Sitio web](https://gibarberi.pages.dev/)
+- [Test de visibilidad gratuito](https://gibarberi.pages.dev/#test)
+- [Instagram @gi.barberi.agency](https://www.instagram.com/gi.barberi.agency/)
+- [LinkedIn](https://linkedin.com/in/gbarberi)
+- [Behance](https://behance.net/gbarberi)
+
+## Optional
+
+- [Política de privacidad](https://gibarberi.pages.dev/privacidad/)
