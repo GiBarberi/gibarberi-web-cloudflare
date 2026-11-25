@@ -127,12 +127,28 @@ form.in button{width:52px;height:52px;border-radius:50%;border:0;background:var(
 .score h3{font-size:26px;letter-spacing:-.02em;margin:18px 0 8px}.score p{color:var(--grey);margin:0 0 22px}
 
 /* trabajos */
-.wgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:48px}
-.w{border-radius:24px;overflow:hidden;background:#fff;box-shadow:0 0 0 1px var(--line);text-decoration:none;transition:transform .35s}
-.w:hover{transform:translateY(-6px)}
-.w .im{aspect-ratio:4/3;display:grid;place-items:end start;padding:20px;color:#fff;font-weight:700;font-size:28px;letter-spacing:-.03em}
-.w .tx{padding:16px 20px 20px;display:flex;justify-content:space-between;gap:10px;font-size:14px;color:var(--grey)}
-.small{font-size:13px;color:var(--grey);margin-top:18px}
+.wf{display:flex;flex-wrap:wrap;gap:10px;margin-top:40px}
+.wf button{min-height:44px;padding:0 20px;border-radius:999px;border:0;background:#fff;box-shadow:inset 0 0 0 1.5px var(--line);font:600 15px Montserrat;color:var(--ink);cursor:pointer}
+.wf button small{font-weight:500;color:var(--grey);margin-left:4px}
+.wf button[aria-selected=true]{background:var(--v);color:#fff;box-shadow:none}.wf button[aria-selected=true] small{color:rgba(255,255,255,.75)}
+.wgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:28px}
+.w{all:unset;box-sizing:border-box;cursor:pointer;border-radius:24px;overflow:hidden;background:#fff;box-shadow:0 0 0 1px var(--line);transition:transform .35s,box-shadow .35s;display:block}
+.w[hidden]{display:none}
+.w:hover{transform:translateY(-6px);box-shadow:0 30px 60px -30px rgba(40,20,120,.35),0 0 0 1px var(--line)}
+.w:focus-visible{outline:3px solid var(--orc);outline-offset:3px}
+.w .im{aspect-ratio:4/3;overflow:hidden;background:var(--lav)}
+.w img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.w:hover img{transform:scale(1.04)}
+.w .tx{padding:16px 20px 20px;display:flex;flex-direction:column;gap:2px}.w .tx b{font-size:18px;letter-spacing:-.01em}.w .tx span{font-size:14px;color:var(--grey)}
+.small{font-size:14px;color:var(--grey);margin-top:22px}
+.case{position:fixed;inset:0;z-index:70;background:rgba(18,12,46,.55);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:max(3vw,10px)}
+.case.on{display:flex}
+.cpanel{background:var(--paper);border-radius:24px;width:min(1040px,100%);height:min(92vh,100%);display:flex;flex-direction:column;overflow:hidden}
+.chead{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 22px;border-bottom:1px solid var(--line)}
+.chead b{display:block;font-size:20px;letter-spacing:-.02em}.chead span{font-size:14px;color:var(--grey)}
+.chead .btn{min-height:44px;padding:0 20px;flex:none}
+.cbody{flex:1;overflow-y:auto;background:#fff}.cbody img{width:100%;display:block}
+.cfoot{display:flex;flex-wrap:wrap;gap:10px;padding:14px 22px;border-top:1px solid var(--line)}.cfoot .btn{min-height:46px}
 
 /* proceso */
 .steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:56px;position:relative}
@@ -214,8 +230,9 @@ footer{padding:28px max(5vw,18px);display:flex;flex-wrap:wrap;gap:12px 28px;just
 
 <section id="trabajos" class="band"><div class="wrap">
  <p class="lbl">Trabajos</p><h2 class="rv">Marcas que ya <span class="it">dieron el paso.</span></h2>
+ <div class="wf" id="wf" role="tablist" aria-label="Filtrar trabajos"></div>
  <div class="wgrid" id="wg"></div>
- <p class="small">Las imágenes de cada proyecto se suman en la versión final.</p>
+ <p class="small">Más proyectos en <a href="https://behance.net/gbarberi">Behance</a>.</p>
 </div></section>
 
 <section id="proceso" class="band" style="background:#fff"><div class="wrap">
@@ -241,6 +258,11 @@ footer{padding:28px max(5vw,18px);display:flex;flex-wrap:wrap;gap:12px 28px;just
  </div>
 </div></section>
 </main>
+<div class="case" id="case" role="dialog" aria-modal="true" aria-labelledby="ct">
+ <div class="cpanel"><div class="chead"><div><b id="ct"></b><span id="cs"></span></div><button class="btn ghost" id="cb">Cerrar</button></div>
+ <div class="cbody"><img alt=""></div>
+ <div class="cfoot"><a class="btn" href="#contacto" onclick="document.getElementById('cb').click()">Quiero algo así</a><a class="btn ghost" href="https://behance.net/gbarberi">Ver en Behance</a></div></div>
+</div>
 <footer><span>© 2026 Gi. Barberi · Buenos Aires</span><span>Sitio estático en Cloudflare Pages · optimizado para Google y para IA</span><span><a href="https://linkedin.com/in/gbarberi">LinkedIn</a> · <a href="https://behance.net/gbarberi">Behance</a></span></footer>
 
 <script>
@@ -274,14 +296,38 @@ const SV=[["Branding","e identidad","Logo, paleta, tipografías y manual de marc
 ["SEO","y visibilidad en IA","Que te encuentren en Google y que ChatGPT, Gemini y Perplexity te recomienden. Incluye auditoría y plan de 90 días.",["Auditoría IA + SEO","SEO local","Contenido"]],
 ["Automatización","con IA","Agentes y flujos que responden consultas, ordenan clientes y te ahorran horas cada semana.",["Chatbots","n8n","CRM"]],
 ["Consultoría","y capacitación","Estrategia digital, acompañamiento y capacitación para que tu equipo trabaje mejor.",["Estrategia","Talleres","Mentoría"]]];
-const WK=[["El Edicto","Web · SEO · Ads","#5B30FF"],["Desarrollos Arinco","Diseño web","#25A8FF"],["Florería Rosamel","Diseño web","#C86AF6"],["Farmacias Hospital Italiano","Diseño web","#7B5CFF"],["Adu Gansslen","Diseño web","#3D7BFF"],["What Sale Miami","Diseño web","#9C5CF0"]];
+const WK=[
+["actiontech","ActionTech","web","Sitio web","Soluciones audiovisuales corporativas"],
+["eledicto-seo","El Edicto","seo","SEO · GEO · SEM","Que te encuentren. Y que la IA te cite."],
+["devpanda","DevPanda","branding","Isologo","Un panda abrazado al código"],
+["rosamel","Florería Rosamel","web","Tienda online","Una tienda con alma de florería"],
+["eledicto-estrategia","El Edicto","marketing","Estrategia 2027","Plan estratégico 360 para Argentina y Latam"],
+["paracol","Industrias Paracol","branding","Identidad visual","Una marca industrial con dirección"],
+["lavo","LAVO Lavandería","web","Landing page","Dejá la ropa sucia. Llevate el tiempo libre."],
+["publishlegalnotice","Publish Legal Notice","web","Rediseño web · USA","Avisos legales en diarios de Estados Unidos"],
+["ret","RET Estructuras Metálicas","branding","Logo e identidad","Solidez que se ve"],
+["provisuales","Provisuales","web","Sitio web","Tu evento merece ser recordado"],
+["redreceptorias","Red de Receptorías","web","Sitio institucional","Diseñar para los diarios que sí se leen"],
+["somos","Somos Cafetería","branding","Logo","Una taza vista desde arriba"],
+["estudiolang","Estudio Lang","web","Sitio web","Consultoría especializada"],
+["tuedicto-pe","Tu Edicto Perú","web","Sitio web","Avisos legales en todos los diarios del Perú"],
+["tuedicto-mx","Tu Edicto México","web","Sitio web","Avisos legales en los periódicos de México"]];
+const CAT={todos:"Todos",web:"Sitios web",branding:"Branding",marketing:"Marketing",seo:"SEO"};
 const STP=[["Diagnóstico","Entiendo tu negocio, tus números y a tu competencia."],["Estrategia","Definimos qué hacer, qué no y cómo medirlo."],["Diseño y ejecución","Creo, lanzo y mido, con revisiones pautadas."],["Optimización","Ajusto con datos hasta que funcione."]];
 const QS=["¿Tenés perfil de Google Business completo y con fotos?","¿Tenés más de 20 reseñas en Google?","¿Tu web carga en menos de 3 segundos en el celular?","¿Aparecés en la primera página cuando buscan tu rubro y tu ciudad?","¿ChatGPT te menciona si le preguntás por tu rubro?","¿Publicás contenido útil al menos una vez por semana?"];
 
 $('#mqd').innerHTML=[...SV,...SV].map(s=>`<span>${s[0]} <span class="it" style="font-weight:400">${s[1]}</span></span>`).join('');
 $('#svc').innerHTML=SV.map((s,i)=>`<div class="row${i?'':' on'}"><button aria-expanded="${!i}"><span>${s[0]} <span class="it">${s[1]}</span></span></button><div class="d"><div><p>${s[2]}</p><div class="tags">${s[3].map(t=>`<span>${t}</span>`).join('')}</div></div></div></div>`).join('');
 document.querySelectorAll('.row button').forEach(b=>b.onclick=()=>{const r=b.parentElement,o=!r.classList.contains('on');r.classList.toggle('on',o);b.setAttribute('aria-expanded',o)});
-$('#wg').innerHTML=WK.map(w=>`<a class="w" href="#contacto"><div class="im" style="background:radial-gradient(70% 70% at 80% 10%,rgba(255,255,255,.35),transparent 60%),${w[2]}">${w[0]}</div><div class="tx"><span>${w[1]}</span><span>→</span></div></a>`).join('');
+$('#wf').innerHTML=Object.entries(CAT).map(([k,v],i)=>`<button role="tab" aria-selected="${!i}" data-c="${k}">${v} <small>${k==='todos'?WK.length:WK.filter(w=>w[2]===k).length}</small></button>`).join('');
+$('#wg').innerHTML=WK.map((w,i)=>`<button class="w" data-i="${i}" data-c="${w[2]}" aria-label="Ver ${w[1]} · ${w[3]}"><div class="im"><img src="trabajos/${w[0]}.webp" alt="${w[1]} · ${w[3]}" width="900" height="675" loading="lazy" decoding="async"></div><div class="tx"><b>${w[1]}</b><span>${w[3]}</span></div></button>`).join('');
+$('#wf').onclick=e=>{const b=e.target.closest('button');if(!b)return;document.querySelectorAll('#wf button').forEach(x=>x.setAttribute('aria-selected',x===b));const c=b.dataset.c;document.querySelectorAll('#wg .w').forEach(w=>w.hidden=!(c==='todos'||w.dataset.c===c));track('filtro_trabajos',{categoria:c})};
+const cm=$('#case'),mdImg=$('#case img'),mdT=$('#ct'),mdS=$('#cs'),mdB=$('#cb');let last=null;
+function openCase(i){const w=WK[i];last=document.activeElement;mdT.textContent=w[1];mdS.textContent=`${w[3]} · ${w[4]}`;mdImg.src=`trabajos/${w[0]}-completo.webp`;mdImg.alt=`Caso completo: ${w[1]}`;cm.classList.add('on');document.body.style.overflow='hidden';cm.querySelector('.cbody').scrollTop=0;mdB.focus();track('ver_trabajo',{trabajo:w[1]})}
+function closeCase(){cm.classList.remove('on');document.body.style.overflow='';mdImg.removeAttribute('src');last&&last.focus()}
+$('#wg').onclick=e=>{const b=e.target.closest('.w');if(b)openCase(+b.dataset.i)};
+mdB.onclick=closeCase;cm.onclick=e=>{if(e.target===cm)closeCase()};
+addEventListener('keydown',e=>{if(e.key==='Escape'&&cm.classList.contains('on'))closeCase()});
 $('#steps').insertAdjacentHTML('beforeend',STP.map(s=>`<div class="st"><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join(''));
 
 /* test */
@@ -304,7 +350,8 @@ const R={
  svc:{k:/servicio|hace|ofrece|qué hac/,t:"Ofrece **branding**, **diseño web**, **Google y Meta Ads**, **SEO y visibilidad en IA**, **automatización con IA** y **consultoría**. Podés ver el detalle en la sección Servicios.",go:"#servicios"},
  pre:{k:/precio|cuesta|cuánto|cuanto|presupuesto|tarifa/,t:"Depende del alcance. Después de una primera charla sin costo, te arma una **propuesta con tres planes** para que elijas cómo avanzar.",go:"#contacto"},
  ia:{k:/\bia\b|chatgpt|gemini|seo|google|auditor|visib/,t:"Hace una **Auditoría de visibilidad IA + SEO**: mide cómo te muestran Google, ChatGPT, Gemini y Perplexity, te compara con tu competencia y te da un plan de 90 días. Probá el test gratis acá abajo.",go:"#test"},
- web:{k:/web|sitio|página|pagina|tienda/,t:"Diseña y desarrolla **sitios rápidos y claros**, con SEO técnico desde el primer día y pensados para que las visitas se conviertan en consultas.",go:"#trabajos"},
+ web:{k:/web|sitio|página|pagina|tienda/,t:"Diseña y desarrolla **sitios rápidos y claros**, con SEO técnico desde el primer día y pensados para que las visitas se conviertan en consultas. Entre sus trabajos están **Florería Rosamel**, **ActionTech**, **LAVO** y **Publish Legal Notice** (Estados Unidos).",go:"#trabajos"},
+ port:{k:/trabajo|portfolio|cliente|proyecto|marca hizo|ejemplo/,t:"Trabajó con marcas como **El Edicto** (estrategia, SEO y GEO), **Red de Receptorías**, **Tu Edicto Perú y México**, **Florería Rosamel**, **DevPanda** y **RET Estructuras Metálicas**, entre otras. Podés ver cada caso completo en la sección Trabajos.",go:"#trabajos"},
  pro:{k:/trabaja|proceso|cómo|como|paso/,t:"Trabaja en **cuatro pasos**: diagnóstico, estrategia, diseño y ejecución, y optimización con datos.",go:"#proceso"},
  con:{k:/contact|whats|mail|hablar|escrib/,t:"Escribile por **WhatsApp** (botón en Contacto) o a **grabarberidg@gmail.com**. Responde en el día.",go:"#contacto"}};
 const CH=[["¿Qué servicios ofrece?","svc"],["¿Hace auditorías de IA?","ia"],["¿Cuánto cuesta?","pre"],["¿Cómo trabaja?","pro"]];
