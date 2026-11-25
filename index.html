@@ -243,7 +243,7 @@ footer{padding:28px max(5vw,18px);display:flex;flex-wrap:wrap;gap:12px 28px;just
 
 <section id="sobre" class="band"><div class="wrap about">
  <div class="big rv">Gi<span class="dot"></span></div>
- <div><p class="lbl">Sobre mí</p><h2 style="font-size:clamp(40px,5vw,68px)">Hola, soy <span class="it">Graciela.</span></h2>
+ <div><p class="lbl">Sobre mí</p><h2 style="font-size:clamp(40px,5vw,68px)">Hola, soy <span class="it">Grace.</span></h2>
   <p style="font-size:18px;color:var(--grey);margin:22px 0 0">Diseño marcas y sitios desde 2015. Hoy sumo marketing, Google Ads, SEO e IA para que tu marca no solo se vea bien: que venda. Trabajo con marcas de Argentina y Latinoamérica.</p>
   <ul><li>Diseñadora gráfica · Universidad de Palermo</li><li>Máster en Diseño Web y Programación · Barcelona</li><li>Carrera de AI Marketing y Automatización</li></ul></div>
 </div></section>
@@ -361,7 +361,7 @@ const esc=s=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&q
 const md=s=>esc(s).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
 function say(q,key){if(busy)return;busy=true;track('chat_pregunta',{pregunta:q.slice(0,100)});
  log.insertAdjacentHTML('beforeend',`<div class="q">${esc(q)}</div>`);
- const r=R[key]||Object.values(R).find(x=>x.k.test(q.toLowerCase()))||{t:"Buena pregunta. Lo mejor es que se lo cuentes directo a Graciela por **WhatsApp** o mail, desde la sección Contacto. Te responde en el día.",go:"#contacto"};
+ const r=R[key]||Object.values(R).find(x=>x.k.test(q.toLowerCase()))||{t:"Buena pregunta. Lo mejor es que se lo cuentes directo a Grace por **WhatsApp** o mail, desde la sección Contacto. Te responde en el día.",go:"#contacto"};
  const a=document.createElement('div');a.className='a';a.innerHTML='<div class="av">Gi.</div><div><p></p></div>';log.appendChild(a);
  const p=a.querySelector('p');let i=0;const txt=r.t;
  const step=()=>{i=Math.min(txt.length,i+(RM?txt.length:3));p.innerHTML=md(txt.slice(0,i))+(i<txt.length?'<span class="caret"></span>':'');log.scrollTop=log.scrollHeight;
