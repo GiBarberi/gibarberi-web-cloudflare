@@ -19,7 +19,7 @@
 <meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#5B30FF">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Gi. Barberi","description":"Estudio de diseño, marketing y SEO","founder":{"@type":"Person","name":"Graciela Barberi"},"url":"https://gibarberi.pages.dev/","image":"https://gibarberi.pages.dev/og.png","knowsAbout":["Branding","Diseño web","Google Ads","Meta Ads","SEO","Visibilidad en IA","Automatización con IA"],"areaServed":["Argentina","Latinoamérica"],"address":{"@type":"PostalAddress","addressLocality":"Buenos Aires","addressCountry":"AR"},"email":"grabarberidg@gmail.com","telephone":"+5491121657824","sameAs":["https://www.instagram.com/gi.barberi.agency/","https://linkedin.com/in/gbarberi","https://behance.net/gbarberi"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Gi. Barberi","description":"Estudio de diseño, marketing y SEO","founder":{"@type":"Person","name":"Graciela Barberi"},"url":"https://gibarberi.pages.dev/","image":"https://gibarberi.pages.dev/og.png","knowsAbout":["Branding","Diseño web","Google Ads","Meta Ads","SEO","Visibilidad en IA","Automatización con IA"],"areaServed":["Argentina","Latinoamérica"],"address":{"@type":"PostalAddress","addressLocality":"Buenos Aires","addressCountry":"AR"},"email":"grabarberidg@gmail.com","sameAs":["https://www.instagram.com/gi.barberi.agency/","https://linkedin.com/in/gbarberi","https://behance.net/gbarberi"]}</script>
 <style>
 /* VOICE  segura, cercana, rioplatense; frases cortas
    IDEA   la web se comporta como una respuesta de IA que te recomienda: el punto del logo es el cursor, el loader y la firma
@@ -177,7 +177,7 @@ footer{padding:28px max(5vw,18px);display:flex;flex-wrap:wrap;gap:12px 28px;just
 <div id="menu" role="dialog" aria-label="Menú">
  <button class="btn ghost x" id="mx">Cerrar</button>
  <div><a class="m" href="#servicios">Servicios</a><a class="m" href="#test">Test de visibilidad</a><a class="m" href="#trabajos">Trabajos</a><a class="m" href="#sobre">Sobre mí</a><a class="m" href="#contacto">Contacto</a></div>
- <div class="mf"><span>grabarberidg@gmail.com</span><span>+54 9 11 2165-7824</span><a href="https://www.instagram.com/gi.barberi.agency/">Instagram</a><a href="https://linkedin.com/in/gbarberi">LinkedIn</a><a href="https://behance.net/gbarberi">Behance</a></div>
+ <div class="mf"><span>grabarberidg@gmail.com</span><a href="https://www.instagram.com/gi.barberi.agency/">Instagram</a><a href="https://linkedin.com/in/gbarberi">LinkedIn</a><a href="https://behance.net/gbarberi">Behance</a></div>
 </div>
 
 <main>
@@ -235,7 +235,7 @@ footer{padding:28px max(5vw,18px);display:flex;flex-wrap:wrap;gap:12px 28px;just
  <h2>Hable&shy;mos<span class="dot"></span></h2>
  <p style="font-size:20px;max-width:520px;margin:28px 0 0;opacity:.92">Contame tu idea y te respondo en el día.</p>
  <div class="cgrid">
-  <a href="https://wa.me/5491121657824"><small>WhatsApp</small><b>+54 9 11 2165-7824</b></a>
+  <a href="https://wa.me/5491121657824"><small>WhatsApp</small><b>Escribime por WhatsApp</b></a>
   <a href="mailto:grabarberidg@gmail.com"><small>Email</small><b>grabarberidg@gmail.com</b></a>
   <a href="https://www.instagram.com/gi.barberi.agency/"><small>Instagram</small><b>@gi.barberi.agency</b></a>
  </div>
@@ -306,14 +306,14 @@ const R={
  ia:{k:/\bia\b|chatgpt|gemini|seo|google|auditor|visib/,t:"Hace una **Auditoría de visibilidad IA + SEO**: mide cómo te muestran Google, ChatGPT, Gemini y Perplexity, te compara con tu competencia y te da un plan de 90 días. Probá el test gratis acá abajo.",go:"#test"},
  web:{k:/web|sitio|página|pagina|tienda/,t:"Diseña y desarrolla **sitios rápidos y claros**, con SEO técnico desde el primer día y pensados para que las visitas se conviertan en consultas.",go:"#trabajos"},
  pro:{k:/trabaja|proceso|cómo|como|paso/,t:"Trabaja en **cuatro pasos**: diagnóstico, estrategia, diseño y ejecución, y optimización con datos.",go:"#proceso"},
- con:{k:/contact|whats|mail|hablar|escrib/,t:"Escribile por **WhatsApp al +54 9 11 2165-7824** o a **grabarberidg@gmail.com**. Responde en el día.",go:"#contacto"}};
+ con:{k:/contact|whats|mail|hablar|escrib/,t:"Escribile por **WhatsApp** (botón en Contacto) o a **grabarberidg@gmail.com**. Responde en el día.",go:"#contacto"}};
 const CH=[["¿Qué servicios ofrece?","svc"],["¿Hace auditorías de IA?","ia"],["¿Cuánto cuesta?","pre"],["¿Cómo trabaja?","pro"]];
 const log=$('#log');let busy=false;
 const esc=s=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const md=s=>esc(s).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
 function say(q,key){if(busy)return;busy=true;track('chat_pregunta',{pregunta:q.slice(0,100)});
  log.insertAdjacentHTML('beforeend',`<div class="q">${esc(q)}</div>`);
- const r=R[key]||Object.values(R).find(x=>x.k.test(q.toLowerCase()))||{t:"Buena pregunta. Lo mejor es que se lo cuentes directo a Graciela: **WhatsApp +54 9 11 2165-7824**. Te responde en el día.",go:"#contacto"};
+ const r=R[key]||Object.values(R).find(x=>x.k.test(q.toLowerCase()))||{t:"Buena pregunta. Lo mejor es que se lo cuentes directo a Graciela por **WhatsApp** o mail, desde la sección Contacto. Te responde en el día.",go:"#contacto"};
  const a=document.createElement('div');a.className='a';a.innerHTML='<div class="av">Gi.</div><div><p></p></div>';log.appendChild(a);
  const p=a.querySelector('p');let i=0;const txt=r.t;
  const step=()=>{i=Math.min(txt.length,i+(RM?txt.length:3));p.innerHTML=md(txt.slice(0,i))+(i<txt.length?'<span class="caret"></span>':'');log.scrollTop=log.scrollHeight;
