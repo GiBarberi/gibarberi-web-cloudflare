@@ -245,6 +245,8 @@ footer{padding:28px max(5vw,18px);display:flex;flex-wrap:wrap;gap:12px 28px;just
 {
 const $=s=>document.querySelector(s);
 const RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const track=(event,p={})=>{try{(window.dataLayer=window.dataLayer||[]).push({event,...p})}catch(e){}};
+
 
 /* loader */
 const ld=$('#ld'),pc=$('#pc');
@@ -323,7 +325,6 @@ if(RM)startDemo();setTimeout(startDemo,2600);
 
 
 /* medición (GTM / GA4) */
-const track=(event,p={})=>{try{(window.dataLayer=window.dataLayer||[]).push({event,...p})}catch(e){}};
 document.addEventListener('click',e=>{const a=e.target.closest('a');if(!a)return;const h=a.getAttribute('href')||'';
  if(h.includes('wa.me'))track('click_whatsapp',{ubicacion:a.closest('section')?.id||'nav'});
  else if(h.startsWith('mailto:'))track('click_email');
