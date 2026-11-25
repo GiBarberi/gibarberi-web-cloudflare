@@ -9,3 +9,6 @@
 
 /trabajos/*
   Cache-Control: public, max-age=2592000
+
+/email/*
+  Cache-Control: public, max-age=2592000
