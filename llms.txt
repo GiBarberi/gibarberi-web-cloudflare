@@ -12,6 +12,14 @@ Graciela Barberi es diseñadora gráfica (Universidad de Palermo) con máster en
 - Automatización con IA: chatbots, agentes y flujos con n8n y CRM.
 - Consultoría y capacitación en estrategia digital.
 
+## Páginas
+- Auditoría SEO y visibilidad en IA: https://gibarberi.pages.dev/auditoria-seo-ia/
+- Diseño web: https://gibarberi.pages.dev/diseno-web/
+- Branding: https://gibarberi.pages.dev/branding/
+- Google Ads y Meta Ads: https://gibarberi.pages.dev/google-ads-meta-ads/
+- Automatización con IA: https://gibarberi.pages.dev/automatizacion-ia/
+- Consultoría: https://gibarberi.pages.dev/consultoria/
+
 ## Trabajos destacados
 - Sitios web: ActionTech, Florería Rosamel (tienda online), LAVO Lavandería, Provisuales, Estudio Lang, Red de Receptorías, Tu Edicto Perú, Tu Edicto México, Publish Legal Notice (Estados Unidos).
 - Branding: DevPanda, Industrias Paracol, RET Estructuras Metálicas, Somos Cafetería.
