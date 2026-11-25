@@ -6,16 +6,16 @@ Graciela Barberi es diseñadora gráfica (Universidad de Palermo) con máster en
 
 ## Servicios
 
-- [Auditoría SEO y visibilidad en IA](https://gibarberi.pages.dev/auditoria-seo-ia/): cómo aparece una marca en Google, ChatGPT, Gemini y Perplexity, comparación con la competencia y plan de acción a 90 días.
-- [Diseño web](https://gibarberi.pages.dev/diseno-web/): sitios rápidos, tiendas online y landing pages con SEO técnico y medición desde el primer día.
-- [Branding e identidad visual](https://gibarberi.pages.dev/branding/): estrategia de marca, logo, paleta, tipografías y manual de identidad.
-- [Google Ads y Meta Ads](https://gibarberi.pages.dev/google-ads-meta-ads/): campañas medidas en conversiones, con optimización y reporte mensual.
-- [Automatización con IA](https://gibarberi.pages.dev/automatizacion-ia/): chatbots, agentes y flujos con n8n y CRM.
-- [Consultoría y capacitación](https://gibarberi.pages.dev/consultoria/): estrategia digital, acompañamiento y talleres para equipos.
+- [Auditoría SEO y visibilidad en IA](https://gibarberi.com/auditoria-seo-ia/): cómo aparece una marca en Google, ChatGPT, Gemini y Perplexity, comparación con la competencia y plan de acción a 90 días.
+- [Diseño web](https://gibarberi.com/diseno-web/): sitios rápidos, tiendas online y landing pages con SEO técnico y medición desde el primer día.
+- [Branding e identidad visual](https://gibarberi.com/branding/): estrategia de marca, logo, paleta, tipografías y manual de identidad.
+- [Google Ads y Meta Ads](https://gibarberi.com/google-ads-meta-ads/): campañas medidas en conversiones, con optimización y reporte mensual.
+- [Automatización con IA](https://gibarberi.com/automatizacion-ia/): chatbots, agentes y flujos con n8n y CRM.
+- [Consultoría y capacitación](https://gibarberi.com/consultoria/): estrategia digital, acompañamiento y talleres para equipos.
 
 ## Trabajos
 
-- [Portfolio en el sitio](https://gibarberi.pages.dev/#trabajos): 15 proyectos con su caso completo.
+- [Portfolio en el sitio](https://gibarberi.com/#trabajos): 15 proyectos con su caso completo.
 - Sitios web: ActionTech, Florería Rosamel (tienda online), LAVO Lavandería, Provisuales, Estudio Lang, Red de Receptorías, Tu Edicto Perú, Tu Edicto México y Publish Legal Notice (Estados Unidos).
 - Branding: DevPanda, Industrias Paracol, RET Estructuras Metálicas y Somos Cafetería.
 - Marketing: El Edicto, estrategia 2027.
@@ -24,12 +24,12 @@ Graciela Barberi es diseñadora gráfica (Universidad de Palermo) con máster en
 
 ## Contacto
 
-- [Sitio web](https://gibarberi.pages.dev/)
-- [Test de visibilidad gratuito](https://gibarberi.pages.dev/#test)
+- [Sitio web](https://gibarberi.com/)
+- [Test de visibilidad gratuito](https://gibarberi.com/#test)
 - [Instagram @gi.barberi.agency](https://www.instagram.com/gi.barberi.agency/)
 - [LinkedIn](https://linkedin.com/in/gbarberi)
 - [Behance](https://behance.net/gbarberi)
 
 ## Optional
 
-- [Política de privacidad](https://gibarberi.pages.dev/privacidad/)
+- [Política de privacidad](https://gibarberi.com/privacidad/)

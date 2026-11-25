@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gibarberi.pages.dev/sitemap.xml
+Sitemap: https://gibarberi.com/sitemap.xml
